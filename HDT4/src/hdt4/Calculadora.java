@@ -8,7 +8,9 @@ package hdt4;
 
 /**
  *
- * @author Ed. Chamo
+ * @Daniel Gerendas 13158
+ * @Edgar Chamo 13083
+ * @since 1/08/2014
  */
 public class Calculadora {
     
