@@ -62,6 +62,7 @@ public class ListCircular<E> extends AbstractList<E> {
             Node<E> newFirst=tail.next().next();        //se crea la referencia al nuevo primer valor
             tail.setNext(newFirst);                     //se setea como el nuevo primer valor
         }
+        count--;
         return val;
     }
     
