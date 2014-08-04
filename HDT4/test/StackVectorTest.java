@@ -12,8 +12,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
- * @author Ed. Chamo
+ * @author Daniel Gerendas 13158
+ * @author Edgar Chamo 13083
+ * @since 1/08/2014
  */
 public class StackVectorTest {
     
