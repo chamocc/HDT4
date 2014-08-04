@@ -10,7 +10,7 @@ public class HDT4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Calculadora calculadora= new Calculadora();
+        Calculadora calculadora= CalculadoraSingleton.getInstance();
         calculadora.calcular();
     }
     
