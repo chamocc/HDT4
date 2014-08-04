@@ -12,8 +12,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
- * @author Ed. Chamo
+ * @author Daniel Gerendas 13158
+ * @author Edgar Chamo 13083
+ * @since 1/08/2014
  */
 public class StackArrayListTest {
     
@@ -59,10 +60,17 @@ public class StackArrayListTest {
         System.out.println("pop");
         StackArrayList instance = new StackArrayList();
         Object expResult = null;
-        Object result = instance.pop();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Object result = instance.pop();
+        boolean val1=false;
+        boolean val2=false;
+        
+        Object item=3;
+        instance.push(item);
+        Object result=instance.pop();
+        if(result==item && instance.empty()==true){
+            val2=true;
+        }
+        assertTrue(val2);
     }
 
     /**
@@ -72,11 +80,13 @@ public class StackArrayListTest {
     public void testPeek() {
         System.out.println("peek");
         StackArrayList instance = new StackArrayList();
-        Object expResult = null;
-        Object result = instance.peek();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Object item=null;
+        instance.push(item);
+        boolean val=false;
+        if(instance.peek()==item && instance.size()==1){
+            val=true;
+        }
+        assertTrue(val);
     }
 
     /**
@@ -89,8 +99,6 @@ public class StackArrayListTest {
         int expResult = 0;
         int result = instance.size();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
