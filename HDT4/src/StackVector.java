@@ -4,7 +4,7 @@
  * @since 1/08/2014
  */
 import java.util.*;
-public class StackVector <E> implements Stack <E> {
+public class StackVector <E> extends AbstractStack <E> {
     protected Vector<E> data;
     private int index=0;
     
@@ -52,12 +52,6 @@ public class StackVector <E> implements Stack <E> {
          }
     }
 
-    @Override
-    public boolean empty() {
-        //pre:
-        //post: regresa true si el stack se encuentra vacio
-        return data.isEmpty();
-    }
 
     @Override
     public int size() {

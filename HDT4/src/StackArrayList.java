@@ -5,7 +5,7 @@
  */
 import java.util.ArrayList;
 public class StackArrayList<E>
- implements Stack<E>
+ extends AbstractStack<E>
 {
 	protected ArrayList<E> data;
 
@@ -45,11 +45,5 @@ public class StackArrayList<E>
 	{
 		return data.size();
 	}
-  
-        @Override
-	public boolean empty()
-	// post: returns true if and only if the stack is empty
-	{
-		return size() == 0;
-	}
+
 }
