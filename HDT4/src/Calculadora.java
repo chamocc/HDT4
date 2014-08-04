@@ -13,13 +13,13 @@ class Calculadora {
     private FileReader fr;
     private BufferedReader br = null;
     
-   public void Calculadora () {
-      StackFactory<String> factory= new StackFactory<String>();
+   public Calculadora () {
+      StackFactory<Integer> factory= new StackFactory<Integer>();
       operaciones= new StackArrayList<String>();
       datos= factory.getStack();
       resultados=new ArrayList<Integer>();
+
    }
-   
    public void calcular(){
       //Comienza código tomado de internet
       try {
@@ -27,7 +27,7 @@ class Calculadora {
          // hacer una lectura comoda (disponer del metodo readLine()).
           
          //poner la direccion de la carpeta del archivo en la computadora respectiva
-         archivo = new File ("C:\\Users\\Ed. Chamo\\Desktop\\Trabajos GitHub\\HDT2-Estructura-de-datos\\datos.txt");
+         archivo = new File ("C:\\Users\\Daniel\\Documents\\Daniel pers\\U\\Segundo año\\Segundo Semestre\\Estructuras de Datos\\Hojas de Trabajo\\Hoja 4\\HDT4\\operaciones.txt");
          fr = new FileReader (archivo);
          br = new BufferedReader(fr);
  
