@@ -9,15 +9,18 @@ class Calculadora {
     private Stack<String> operaciones;
     private ArrayList<Integer> resultados;
     private Stack<Integer> datos;
+    private File archivo;
+    private FileReader fr;
+    private BufferedReader br = null;
     
    public void Calculadora () {
-      File archivo = null;
-      FileReader fr = null;
-      BufferedReader br = null;
-      operaciones= new StackVector<String>();
-      datos= new StackVector<Integer>();
+      StackFactory<String> factory= new StackFactory<String>();
+      operaciones= new StackArrayList<String>();
+      datos= StackFactory.getStack());
       resultados=new ArrayList<Integer>();
- 
+   }
+   
+   public void calcular(){
       //Comienza código tomado de internet
       try {
          // Apertura del fichero y creacion de BufferedReader para poder
