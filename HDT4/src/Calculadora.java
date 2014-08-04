@@ -16,7 +16,7 @@ class Calculadora {
    public void Calculadora () {
       StackFactory<String> factory= new StackFactory<String>();
       operaciones= new StackArrayList<String>();
-      datos= StackFactory.getStack());
+      datos= factory.getStack();
       resultados=new ArrayList<Integer>();
    }
    

@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @author Edgar Chamo 13083
  * @since 1/08/2014
  */
-public class StackFactory {
+public class StackFactory<E> {
     public Stack getStack(){
         Scanner entrada=new Scanner(System.in);
         System.out.println("Ingrese Implementacion del Stack: \n0: StackVector\n1: StackList\n2: StackArrayList\n");
@@ -14,11 +14,11 @@ public class StackFactory {
         entrada.nextLine();
         switch (param){
             case 0:
-                return new StackVector();
+                return new StackVector<E>();
             case 1:
-                return new StackList();
+                return new StackList<E>();
             case 2:
-                return new StackArrayList();
+                return new StackArrayList<E>();
         }
         return null;
     }
