@@ -1,7 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author Daniel Gerendas 13158
+ * @author Edgar Chamo 13083
+ * @since 1/08/2014
  */
 
 import org.junit.After;
@@ -45,8 +45,11 @@ public class ListCircularTest {
         Object value = null;
         ListCircular instance = new ListCircular();
         instance.addFirst(value);
+        boolean val=false;
+        if(instance.size()==1)
+            val=true;
+        assertTrue(val);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -60,7 +63,6 @@ public class ListCircularTest {
         int result = instance.size();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -71,10 +73,16 @@ public class ListCircularTest {
         System.out.println("getFirst");
         ListCircular instance = new ListCircular();
         Object expResult = null;
-        Object result = instance.getFirst();
+        Object result = null;
+        
+        instance.addFirst(result);
+        boolean val=false;
+        if(instance.getFirst()==result && instance.size()==1){
+            val=true;
+        }
+        assertTrue(val);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -85,10 +93,19 @@ public class ListCircularTest {
         System.out.println("removeFirst");
         ListCircular instance = new ListCircular();
         Object expResult = null;
-        Object result = instance.removeFirst();
-        assertEquals(expResult, result);
+        //Object result = instance.removeFirst();
+        
+        boolean val1=false;
+        boolean val2=false;
+        
+        Object item=3;
+        instance.addFirst(item);
+        Object result=instance.removeFirst();
+        if(result==item && instance.size()==0){
+            val2=true;
+        }
+        assertTrue(val2);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
